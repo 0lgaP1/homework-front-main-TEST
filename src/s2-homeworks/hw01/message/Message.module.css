@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+.message {
+    border: 4px solid gold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.imageAndText {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+
+}
+
+.imageAndText img {
+    padding: 20px 0 0 20px;
+}
+
+.text {
+    background-color: blue;
+    border-radius: 5px;
+    padding: 16px;
+    position: relative;
+
+}
+
+.text:after {
+    position: absolute;
+    content: '';
+    bottom: 0; /* Располагаем ниже основного блока */
+    left: 520px;
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    border: 20px solid transparent;
+    border-bottom: 20px solid blue;
+    border-left: 20px solid blue;
+}
+
+.name {
+    font-weight: bold;
+    text-align: end;
+}
+
+.messageText {
+    max-width: 500px;
+    width: 100%;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    white-space: normal;
+
+}
+
+.time {
+    color: #212A34;
+    font-size: 10px;
+    text-align: end;
+}
