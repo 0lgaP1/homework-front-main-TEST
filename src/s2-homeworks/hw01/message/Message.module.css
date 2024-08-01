@@ -22,7 +22,7 @@
 }
 
 .text {
-    background-color: blue;
+    background-color: #0066CC;
     border-radius: 5px;
     padding: 16px;
     position: relative;
@@ -38,8 +38,8 @@
     height: 0;
     background-color: transparent;
     border: 20px solid transparent;
-    border-bottom: 20px solid blue;
-    border-left: 20px solid blue;
+    border-bottom: 20px solid #0066CC;
+    border-left: 20px solid #0066CC;
 }
 
 .name {
