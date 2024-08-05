@@ -10,7 +10,7 @@ type GreetingContainerPropsType = {
 export const pureAddUser = (name: string, setError: ((error: string) => void), setName: ((name: string) => void), addUserCallback: ((name: string) => void)) => {
     // если имя пустое - показать ошибку, иначе - добавить юзера и очистить инпут
     if (name.trim() === '') {
-        setError('The name is required')
+        setError('Ошибка! Введите имя!')
     } else {
         addUserCallback(name);
         setName('');
@@ -20,16 +20,16 @@ export const pureAddUser = (name: string, setError: ((error: string) => void), s
 
 export const pureOnBlur = (name: string, setError: ((name: string) => void)) => { // если имя пустое - показать ошибку
     if (name.trim() === '') {
-        setError('Your name is empty');
+        setError('Ошибка! Введите имя!');
     } else {
         setError('');
     }
 }
 
-export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: (() => void)) => { // !!!!!!!!!!!!! если нажата кнопка Enter - добавить
+export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: (() => void)) => { // если нажата кнопка Enter - добавить
     if (e.key === 'Enter') {
         addUser();
-    }
+    }}
 
 // более простой и понятный для новичков
 // function GreetingContainer(props: GreetingPropsType) {
@@ -54,12 +54,14 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: (() => 
             pureOnBlur(name, setError)
         }
 
-        const onEnter = (e: any) => {
+        const onEnter = (e: KeyboardEvent<HTMLInputElement>) => {
             pureOnEnter(e, addUser)
         }
 
-        const totalUsers = 0 // need to fix
-        const lastUserName = 'some name' // need to fix
+        const totalUsers = users.length // need to fix
+        const lastUserName = totalUsers > 1 ? users[totalUsers-1].name : 'No users' // need to fix
+        console.log("totalUsers: ", totalUsers)
+        console.log("lastUserName: ", lastUserName)
 
         return (
             <Greeting
@@ -74,5 +76,4 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: (() => 
             />
         )
     }
-}
 export default GreetingContainer

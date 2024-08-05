@@ -1,6 +1,7 @@
 .App {
     --header_height: 60px;
     border: 4px solid red;
+
 }
 
 .hw {
@@ -9,4 +10,6 @@
 
 .hwTitle {
 color: black;
+    padding-left: 50px;
+    font-weight: 600;
 }
