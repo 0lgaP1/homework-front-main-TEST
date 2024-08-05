@@ -59,7 +59,7 @@ export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: (() => 
         }
 
         const totalUsers = users.length // need to fix
-        const lastUserName = totalUsers > 1 ? users[totalUsers-1].name : 'No users' // need to fix
+        const lastUserName = totalUsers > 0 ? users[totalUsers-1].name : 'No users' // need to fix
         console.log("totalUsers: ", totalUsers)
         console.log("lastUserName: ", lastUserName)
 
