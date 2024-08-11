@@ -1,6 +1,9 @@
 .button {
     font-size: 14px;
     font-weight: normal;
+    border-radius: 4px;
+    border: none;
+    padding: 5px;
 }
 
 .disabled {
@@ -8,7 +11,7 @@
 }
 
 .secondary {
-    border: 5px solid #004D99;
+    border: 2px solid #004D99;
     color: #002E5C;
     background-color: #ffffff;
 }
@@ -48,4 +51,6 @@
 }
 
 .button:disabled {
+    background-color: rgba(32, 56, 238, 0.32);
+    color: dimgrey;
 }

@@ -59,10 +59,10 @@ const HW8 = () => {
             <div className={s2.hw}>
                 <div className={s.container}>
                     <div className={s.buttonsContainer}>
-                        <SuperButton
+                        {/*<SuperButton
                             id={'hw8-button-up'}
                             onClick={sortUp}
-                            xType={currentSort === 'up' ? '' : 'secondary'}
+                            //xType={currentSort === 'up' ? '' : 'secondary'}
                         >
                             Sort up
                         </SuperButton>
@@ -79,7 +79,7 @@ const HW8 = () => {
                             xType={currentSort === '18' ? '' : 'secondary'}
                         >
                             Check 18+
-                        </SuperButton>
+                        </SuperButton>*/}
                     </div>
 
                     <table id={'hw8-users'} className={s.users}>
